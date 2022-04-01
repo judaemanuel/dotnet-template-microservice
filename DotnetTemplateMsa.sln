@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EFA42D57-766F-4700-92C5-A3376A01A69A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTemplateMsa.Domain", "src\DotnetTemplateMsa.Domain\DotnetTemplateMsa.Domain.csproj", "{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTemplateMsa.Infra.Persistence.EFCore", "src\DotnetTemplateMsa.Infra.Persistence.EFCore\DotnetTemplateMsa.Infra.Persistence.EFCore.csproj", "{22F92755-50DA-4FD1-AD2B-029CC1119799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22F92755-50DA-4FD1-AD2B-029CC1119799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22F92755-50DA-4FD1-AD2B-029CC1119799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22F92755-50DA-4FD1-AD2B-029CC1119799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22F92755-50DA-4FD1-AD2B-029CC1119799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
+		{22F92755-50DA-4FD1-AD2B-029CC1119799} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
+	EndGlobalSection
+EndGlobal
