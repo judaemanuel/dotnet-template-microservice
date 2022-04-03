@@ -1,13 +1,19 @@
 using DotnetTemplateMsa.Domain.Categories;
+using DotnetTemplateMsa.Domain.TodoLists;
 using DotnetTemplateMsa.Infra.Persistence.EFCore;
 using DotnetTemplateMsa.Infra.Persistence.EFCore.Categories;
+using DotnetTemplateMsa.Infra.Persistence.EFCore.TodoLists;
 using DotnetTemplateMsa.Service.Categories;
+using DotnetTemplateMsa.Service.TodoLists;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("supermarket-api-in-memory"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("todo-api-in-memory"));
+builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
+builder.Services.AddScoped<ITodoListService, TodoListService>();
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
