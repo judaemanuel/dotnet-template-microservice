@@ -14,6 +14,7 @@ public class Todo
     #endregion
 
     #region entity relationships
+    public int TodoListId { get; set; }
     public TodoList TodoLists { get; set; }
     #endregion
 }

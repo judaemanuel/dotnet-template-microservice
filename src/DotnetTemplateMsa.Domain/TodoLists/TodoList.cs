@@ -13,6 +13,6 @@ public class TodoList
     #endregion
 
     #region entity relationships
-    public IEnumerable<Todo> Todos { get; set; }
+    public IEnumerable<Todo>? Todos { get; set; }
     #endregion
 }
