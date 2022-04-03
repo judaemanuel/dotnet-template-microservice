@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTemplateMsa.Infra.Per
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTemplateMsa.Service", "src\DotnetTemplateMsa.Service\DotnetTemplateMsa.Service.csproj", "{28F8BAB4-0E10-4B9A-8219-3EF720EEEE58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTemplateMsa.Api", "src\DotnetTemplateMsa.Api\DotnetTemplateMsa.Api.csproj", "{8B2D54A9-E55F-42C4-A33F-2974C8980974}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +34,15 @@ Global
 		{28F8BAB4-0E10-4B9A-8219-3EF720EEEE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28F8BAB4-0E10-4B9A-8219-3EF720EEEE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28F8BAB4-0E10-4B9A-8219-3EF720EEEE58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2D54A9-E55F-42C4-A33F-2974C8980974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2D54A9-E55F-42C4-A33F-2974C8980974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2D54A9-E55F-42C4-A33F-2974C8980974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2D54A9-E55F-42C4-A33F-2974C8980974}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{360DCF5E-BA33-4F1B-9FBA-BDA4E16339CF} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
 		{22F92755-50DA-4FD1-AD2B-029CC1119799} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
 		{28F8BAB4-0E10-4B9A-8219-3EF720EEEE58} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
+		{8B2D54A9-E55F-42C4-A33F-2974C8980974} = {EFA42D57-766F-4700-92C5-A3376A01A69A}
 	EndGlobalSection
 EndGlobal
