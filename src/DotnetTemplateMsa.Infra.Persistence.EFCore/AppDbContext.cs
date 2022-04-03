@@ -32,7 +32,6 @@ public class AppDbContext : DbContext
             .HasMaxLength(250);
         builder.Entity<TodoList>().Property(props => props.Description)
             .HasColumnName("description")
-            .IsRequired()
             .HasMaxLength(2000);
         builder.Entity<TodoList>().Property(props => props.CreatedAt)
             .HasColumnName("created_at")
@@ -62,7 +61,6 @@ public class AppDbContext : DbContext
             .HasMaxLength(250);
         builder.Entity<Todo>().Property(props => props.Description)
             .HasColumnName("description")
-            .IsRequired()
             .HasMaxLength(2000);
         builder.Entity<Todo>().Property(props => props.Description)
             .HasColumnName("is_complete")
