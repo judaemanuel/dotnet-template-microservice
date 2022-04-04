@@ -12,4 +12,11 @@ public class TodoListRepository : BaseRepository, ITodoListRepository
     {
         return await _dbContext.TodoLists.ToListAsync();
     }
+
+    public async Task<TodoList> SelectAsync(int id)
+    {
+        #nullable disable
+        return await _dbContext.TodoLists.FindAsync(id);
+        #nullable enable
+    }
 }

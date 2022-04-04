@@ -15,4 +15,11 @@ public class TodoListService : ITodoListService
     {
         return await _todoListRepository.SelectAsync();
     }
+    
+    public async Task<TodoList> ListAsync(int id)
+    {
+        #nullable disable
+        return await _todoListRepository.SelectAsync(id);
+        #nullable enable
+    }
 }

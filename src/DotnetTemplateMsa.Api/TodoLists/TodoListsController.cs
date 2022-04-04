@@ -18,9 +18,26 @@ public class TodoListsController : Controller
     }
 
     [HttpGet]
-    public async Task<IEnumerable<TodoListResource>> Get()
+    public async Task<ActionResult<IEnumerable<TodoListResource>>> Get()
     {
         IEnumerable<TodoList> todoLists = await _todoListService.ListAsync();
-        return _mapper.Map<IEnumerable<TodoList>, IEnumerable<TodoListResource>>(todoLists);
+        if (todoLists == null)
+        {
+            return NotFound();
+        }
+
+        return _mapper.Map<IEnumerable<TodoList>, IEnumerable<TodoListResource>>(todoLists).ToList();
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<TodoListResource>> Get(int id)
+    {
+        TodoList todoList = await _todoListService.ListAsync(id);
+        if (todoList == null)
+        {
+            return NotFound();
+        }
+
+        return _mapper.Map<TodoList, TodoListResource>(todoList);
     }
 }
