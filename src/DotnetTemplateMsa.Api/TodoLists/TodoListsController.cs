@@ -21,7 +21,7 @@ public class TodoListsController : Controller
     public async Task<ActionResult<IEnumerable<TodoListResource>>> Get()
     {
         IEnumerable<TodoList> todoLists = await _todoListService.ListAsync();
-        if (todoLists == null)
+        if (todoLists == null || !todoLists.Any())
         {
             return NotFound();
         }
