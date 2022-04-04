@@ -18,6 +18,8 @@ public class TodoListsController : Controller
     }
 
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<IEnumerable<TodoListResource>>> Get()
     {
         IEnumerable<TodoList> todoLists = await _todoListService.ListAsync();
@@ -30,6 +32,8 @@ public class TodoListsController : Controller
     }
 
     [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<TodoListResource>> Get(int id)
     {
         TodoList todoList = await _todoListService.ListAsync(id);
