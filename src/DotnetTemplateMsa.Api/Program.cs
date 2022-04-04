@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using DotnetTemplateMsa.Domain.TodoLists;
 using DotnetTemplateMsa.Infra.Persistence.EFCore;
 using DotnetTemplateMsa.Infra.Persistence.EFCore.TodoLists;
@@ -12,7 +13,9 @@ builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 builder.Services.AddScoped<ITodoListService, TodoListService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options => options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
